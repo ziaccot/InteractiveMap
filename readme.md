@@ -1,2 +1,2 @@
-#Interactive map of Europe.\n
+#Interactive map of Europe.
 A simple demo of **batik svg toolkit**
