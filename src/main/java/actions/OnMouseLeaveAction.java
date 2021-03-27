@@ -18,8 +18,10 @@ public class OnMouseLeaveAction implements EventListener {
     public void handleEvent(Event evt) {
         Element elt = document.getElementById(country);
 
-        if (country == "Russian Federation") { // in case of Kaliningrad part
-            elt.setAttribute("style", "fill: #fff; stroke: #3899E6; stroke-width: 5; stroke-linejoin: round");
+        if ((country == "Russia") || (country == "Kaliningrad")) { // in case of Kaliningrad part
+            document.getElementById("Russia").setAttribute("style", "fill: #fff; stroke: #3899E6; stroke-width: 5; stroke-linejoin: round");
+            document.getElementById("Kaliningrad").setAttribute("style", "fill: #fff; stroke: #3899E6; stroke-width: 5; stroke-linejoin: round");
+
         } else
             elt.setAttribute("style", "fill: #fff; stroke: #3899E6; stroke-width: 1; stroke-linejoin: round");
     }
