@@ -18,7 +18,7 @@ public class OnMouseLeaveAction implements EventListener {
     public void handleEvent(Event evt) {
         Element elt = document.getElementById(country);
 
-        if ((country == "Russia") || (country == "Kaliningrad")) { // in case of Kaliningrad part
+        if (country == "Russia") { // in case of Kaliningrad part
             document.getElementById("Russia").setAttribute("style", "fill: #fff; stroke: #3899E6; stroke-width: 5; stroke-linejoin: round");
             document.getElementById("Kaliningrad").setAttribute("style", "fill: #fff; stroke: #3899E6; stroke-width: 5; stroke-linejoin: round");
 
