@@ -67,6 +67,15 @@ public class SVGFrame {
             Element elt = document.getElementById(country);
             EventTarget target = (EventTarget) elt;
 
+            if(country == "Russia"){
+                Element el = document.getElementById("Kaliningrad");
+                EventTarget eventTarget = (EventTarget) el;
+
+                eventTarget.addEventListener("click", new OnClickAction(country, frame), false);
+                eventTarget.addEventListener("mousemove", new OnMouseEnterAction(country, document), false);
+                eventTarget.addEventListener("mouseout", new OnMouseLeaveAction(country, document), false);
+            }
+
             target.addEventListener("click", new OnClickAction(country, frame), false);
             target.addEventListener("mousemove", new OnMouseEnterAction(country, document), false);
             target.addEventListener("mouseout", new OnMouseLeaveAction(country, document), false);
